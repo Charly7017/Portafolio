@@ -1,4 +1,4 @@
-/*html {
+html {
   font-size: 14px;
 }
 
@@ -17,13 +17,16 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}*/
 
-.about-me {
+
+.about-me,.footer {
     background-color: #6E07F3;
 }
+.box {
+    background-color: #141c3a;
+   /* margin-top:-9rem;*/
+}
+
 
 .descriptionAboutMe{
     max-width:800px;
@@ -39,7 +42,30 @@ body {
         max-width: 600px;
     }
 }
+.box{
+    margin-top:-9rem;
+}
 
+
+.footer {
+    height:500px;
+}
+
+.footer .contact-info a.rounded-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.footer .contact-info a.rounded-circle:hover {
+    opacity:0.7;
+}
 
 
 
