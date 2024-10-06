@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AboutMeNavbar" xml:space="preserve">
-    <value>Sobre mi</value>
+  <data name="Greetings" xml:space="preserve">
+    <value>Hola, soy Carlos Santamaría</value>
+  </data>
+  <data name="Phrase" xml:space="preserve">
+    <value>Apasionado por crear soluciones innovadoras</value>
+  </data>
+  <data name="Specialities" xml:space="preserve">
+    <value>Desarrollador web y móvil</value>
   </data>
 </root>

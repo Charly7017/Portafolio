@@ -46,18 +46,28 @@ html {
 
 
 /*Skills section*/
-.img-skills{
-    width:3rem;
+
+/* Estilos generales para los íconos */
+#skills img {
+    width: 100px;
+    height: auto;
 }
 
-
-@media screen and (min-width: 700px) {
-    .img-skills {
-        width: 4rem;
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 576px) {
+    #skills img {
+        width: 50px;
+        height: auto;
     }
 }
 
-
+/* Ajuste para pantallas medianas */
+@media (max-width: 768px) {
+    #skills img {
+        width: 75px;
+        height: auto;
+    }
+}
 
 
 

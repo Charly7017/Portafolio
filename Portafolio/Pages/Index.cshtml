@@ -1,5 +1,8 @@
 ﻿@page
+@using Microsoft.Extensions.Localization
 @model IndexModel
+@inject IStringLocalizer<IndexModel> localizer
+
 @{
     ViewData["Title"] = "Mi portafolio";
 }
@@ -16,71 +19,79 @@
 </section>
 
 
-<section class="about-me p-4 text-white">
+<section id="aboutMe" class="about-me p-4 text-white">
     <div class="container">
         <h2 class="text-center">Conóceme</h2>
         <p class="lead mx-auto descriptionAboutMe">
             Mi trayectoria comenzó durante mis estudios de Ingeniería en Sistemas Computacionales, donde tuve la oportunidad de realizar prácticas profesionales en dos empresas.
-            Durante estas experiencias, trabajé en el desarrollo de proyectos web y móviles, aplicando mis conocimientos para crear soluciones eficientes y adaptadas a las necesidades de los usuarios.
-            Aunque estoy en el inicio de mi carrera, mi pasión por la programación me ha llevado a aprender de manera autodidacta, siempre buscando nuevas oportunidades para mejorar mis habilidades técnicas y adquirir nuevos conocimientos.
+            Mi experiencia fue en el desarrollo de proyectos web y móviles, aplicando mis conocimientos para crear soluciones eficientes y adaptadas a las necesidades de los usuarios.
+            Aunque estoy en el inicio de mi carrera, mi pasión por la programación me ha llevado a ser autodidacta, siempre buscando mejorar mis habilidades técnicas y al mismo tiempo adquirir nuevos conocimientos.
         </p>
     </div>
 </section>
 
 
-<section class="p-4 skills">
-    <div class="container">
-        <h2 class="text-center mb-3">Habilidades</h2>
-        <div class="row text-center g-4">
-            <div class="col-md">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img class="img-skills" src="~/Images/programming.png"/>
-                        <h3 class="card-title mb-3">
-                            Lenguajes
-                        </h3>
-                        <span class="badge bg-primary">C#</span>
-                        <span class="badge bg-primary">Javascript</span>
-                        <span class="badge bg-primary">HTML</span>
-                        <span class="badge bg-primary">CSS</span>
-                        <span class="badge bg-primary">SQL</span>
-                    </div>
-                </div>
-            </div> 
-            <div class="col-md">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img class="img-skills" src="~/Images/framework.png" />
-                        <h3 class="card-title mb-3">
-                            Frameworks y librerias
-                        </h3>
-                        <span class="badge bg-primary">jQuery</span>
-                        <span class="badge bg-primary">Bootstrap</span>
-                        <span class="badge bg-primary">.NET</span>
-                        <span class="badge bg-primary">ASP.NET</span>
-                        <span class="badge bg-primary">MAUI</span>
-                    </div>
-                </div>
+
+<section id="skills" class="p-4 skills">
+    <div class="container text-center">
+        <h2 class="mb-3">Habilidades</h2>
+        <h3>Frontend</h3>
+        <div class="row justify-content-between">
+            <div class="col-3 col-md-2">
+                <img src="~/Images/html-icon.svg" />
+                <p>HTML</p>
             </div>
-            <div class="col-md">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img class="img-skills" src="~/Images/platform.png" />
-                        <h3 class="card-title mb-3">
-                            Herramientas y plataformas
-                        </h3>
-                        <span class="badge bg-primary">Git</span>
-                        <span class="badge bg-primary">GitHub</span>
-                        <span class="badge bg-primary">Figma</span>
-                        <span class="badge bg-primary">Azure DevOps</span>
-                    </div>
-                </div>
+            <div class="col-3 col-md-2">
+                <img src="~/Images/css-icon.svg" />
+                <p>CSS</p>
+            </div>
+            <div class="col-3 col-md-2 ">
+                <img src="~/Images/js-icon.svg" />
+                <p>Javascript</p>
+            </div>
+            <div class="col-3 col-md-2">
+                <img src="~/Images/jquery.icon.svg" />
+                <p>jQuery</p>
+            </div>
+            <div class="col-3 col-md-2">
+                <img src="~/Images/boostrap-icon.svg" />
+                <p>Bootstrap</p>
+            </div>
+        </div> 
+        <h3>Backend</h3>
+        <div class="row justify-content-between">
+            <div class="col-3 col-md-2">
+                <img class="img-fluid" src="~/Images/csharp-icon.svg" />
+                <p>C#</p>
+            </div>
+            <div class="col-3 col-md-2">
+                <img src="~/Images/dotnet-icon.svg" />
+                <p>.NET</p>
+            </div>
+            <div class="col-3 col-md-2">
+                <img src="~/Images/aspnet-icon.svg" />
+                <p>ASP.NET</p>
+            </div>
+            <div class="col-3 col-md-2 ">
+                <img src="~/Images/sql-icon.svg" />
+                <p>SQL</p>
+            </div>
+        </div>
+        <h3>Herramientas</h3>
+        @* GIT, GITHUB,FIGMA, AZURE DEVOPS, POSTMAN *@
+        <h3>Móvil</h3>
+        <div class="row justify-content-center">
+            <div class="col-3 col-md-2">
+                <img src="~/Images/html-icon.svg" />
+                <p>MAUI</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="experience p-4">
+
+
+<section id="experience" class="experience p-4">
     <div class="container">
         <h2 class="text-center mb-3">Experiencia</h2>
         <div class="row g-4">
@@ -110,47 +121,33 @@
 </section>
 
 
-<section class="projects p-4">
+<section id="experience" class="experience p-4">
+    <div class="container">
+
+    </div>
+</section>
+
+
+<section id="projects" class="projects p-4">
     <div class="container">
         <h2 class="text-center mb-3">Proyectos</h2>
-        <div class="row text-center g-3">
-            <div class="col-md">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <h3 class="card-title mb-3">Manejador de tareas</h3>
-                        <p class="card-text">Breve descripción del proyecto 1, explicando el objetivo y las funcionalidades clave.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <h3 class="card-title mb-3">Manejo de presupuestos</h3>
-                        <p class="card-text">Breve descripción del proyecto 2, explicando el objetivo y las funcionalidades clave.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <h3 class="card-title mb-3">iContainer</h3>
-                        <p class="card-text">Breve descripción del proyecto 3, explicando el objetivo y las funcionalidades clave.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="mt-3 d-block mx-auto btn btn-primary">Ver todos los proyectos</button>
+        <p class="text-center mb-4">
+            Explora mis proyectos y trabajos
+        </p>
+        <button class="mt-3 d-block mx-auto btn btn-primary" >Ver todos los proyectos</button>
     </div>
 </section>
 
 
 
-<footer class="footer text-white">
+
+
+<footer id="contact" class="footer text-white">
     <div class="box">
         <h2>Te interesó mi perfil?</h2>
         <a href="mailto:alexrace18@gmail.com">Contáctame</a>
     </div>
-    <div class="contact-info d-flex justify-content-center">
+    <div class="contact-info d-flex">
         <a class="rounded-circle" target="_blank" href="https://www.linkedin.com/in/carlos-santamaria-solano-83703a1a6/">
             <i class="bi bi-linkedin social-icons"></i>
         </a>

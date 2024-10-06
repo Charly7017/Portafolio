@@ -7,11 +7,13 @@ namespace Portafolio.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        private readonly IStringLocalizer<IndexModel> _localizer;
+
+
+        public IndexModel(IStringLocalizer<IndexModel> localizer)
         {
-            _logger = logger;
+            _localizer = localizer;
         }
 
         public void OnGet()
@@ -19,5 +21,8 @@ namespace Portafolio.Pages
             
 
         }
+
+        public IStringLocalizer Localizer => _localizer;
+
     }
 }
