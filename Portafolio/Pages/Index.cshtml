@@ -8,13 +8,15 @@
 }
 
 
-<section class="hero p-4 text-center">
-    <div class="container">
-        <img class="hero-desarrollador-imagen img-fluid rounded-circle" src="/Images/foto_mia.svg"/>
-        <h1>Hola, soy Carlos Santamaría</h1>
-        <h2>Desarrollador web y móvil</h2>
-        <h3>Apasionado por crear soluciones innovadoras</h3>
-        <img class="img-fluid hero-inferior-imagen" src="/Images/hero-inferior.svg" />
+<section class="hero p-4">
+    <div class="container d-md-flex align-items-center justify-content-between">
+            <div>
+                <h3 class="fw-bold">Hola  👋, soy</h3>
+                <h1>Carlos Santamaría</h1>
+                <h2>Desarrollador web y móvil</h2>
+                <a asp-page="/Projects" class="btn btn-primary">Explora mis proyectos</a>
+            </div>
+            <img class="hero-desarrollador-imagen img-fluid rounded-circle d-none d-lg-block" src="/Images/foto_mia.svg" />
     </div>
 </section>
 
@@ -29,7 +31,6 @@
         </p>
     </div>
 </section>
-
 
 
 <section id="skills" class="p-4 skills">
@@ -148,22 +149,6 @@
         </div>
     </div>
 </section>
-
-
-
-
-<section id="projects" class="projects p-4">
-    <div class="container">
-        <h2 class="text-center mb-3">Proyectos</h2>
-        <p class="text-center mb-4">
-            Explora mis proyectos y trabajos
-        </p>
-        <button class="mt-3 d-block mx-auto btn btn-primary" >Ver todos los proyectos</button>
-    </div>
-</section>
-
-
-
 
 
 <footer id="contact" class="footer text-white">
