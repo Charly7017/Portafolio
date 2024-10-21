@@ -182,6 +182,12 @@ h1{
 
 
 
+/*ProjectsSection*/
+.personalProjects, .projectsInCompanies{
+    cursor:pointer;
+}
+
+
 
 
 
