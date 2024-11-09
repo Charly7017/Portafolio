@@ -7,18 +7,29 @@
     ViewData["Title"] = "Mi portafolio";
 }
 
-
 <section class="hero p-4">
-    <div class="container d-md-flex align-items-center justify-content-between">
-            <div>
-                <h3 class="fw-bold">Hola  👋, soy</h3>
-                <h1>Carlos Santamaría</h1>
-                <h2>Desarrollador web y móvil</h2>
-                <a asp-page="/Projects" class="btn btn-primary">Explora mis proyectos</a>
-            </div>
-            <img class="hero-desarrollador-imagen img-fluid rounded-circle d-none d-lg-block" src="/Images/foto_mia.svg" />
-    </div>
+    <div class="container text-center">
+        <h1>Carlos Santamaría</h1>
+        <h2>Desarrollador de software</h2>
+        <p>Apasionado por la tecnología y el desarrollo de soluciones innovadoras</p>
+        <div class="contact-info">
+            <a class="" target="_blank" href="https://www.linkedin.com/in/carlos-santamaria-solano-83703a1a6/">
+                <img class="icon" src="/Images/linkedin-icon.png" />
+            </a>
+            <a class="" target="_blank" href="https://github.com/Charly7017">
+                <img class="icon" src="/Images/github-icon.png" />
+            </a>
+            <a class="" target="_blank" href="https://github.com/Charly7017">
+                <img class="icon" src="/Images/mail.icon.png" />
+            </a>  
+            <a class="" target="_blank" href="https://github.com/Charly7017">
+                <img class="icon" src="/Images/cv-icon.png" />
+            </a>
+        </div>
+@*         <img class="img-fluid hero-inferior-imagen d-none d-md-block" src="/Images/hero-inferior.svg" />
+ *@    </div>
 </section>
+
 
 
 <section id="aboutMe" class="about-me p-4 text-white">
@@ -85,7 +96,7 @@
                 <p>Git</p>
             </div> 
             <div class="col-3 col-md-2">
-                <img src="~/Images/github-icon.svg" />
+                <img src="~/Images/github-icon1.svg" />
                 <p>GitHub</p>
             </div> 
             <div class="col-3 col-md-2">
@@ -99,6 +110,17 @@
             <div class="col-3 col-md-2">
                 <img src="~/Images/postman-icon.svg" />
                 <p>Postman</p>
+            </div>
+        </div>
+        <h3>Otros Conocimientos</h3>
+        <div class="row justify-content-around">
+            <div class="col-3 col-md-2">
+                <img src="~/Images/android-icon.svg" />
+                <p>Desarollo android</p>
+            </div>
+            <div class="col-3 col-md-2">
+                <img src="~/Images/kotlin-icon.svg" />
+                <p>Kotlin</p>
             </div>
         </div>
     </div>
@@ -162,7 +184,7 @@
         </a>
         <a class="rounded-circle" target="_blank" href="https://github.com/Charly7017">
             <i class="bi bi-github social-icons"></i>
-        </a>
+        </a> 
     </div>
     <span class="text-center">Creado por Carlos Santamaría (2024) ©</span>
 </footer>

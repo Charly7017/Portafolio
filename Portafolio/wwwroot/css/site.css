@@ -2,12 +2,6 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -19,10 +13,19 @@ html {
 
 
 
+/*General*/
+.about-me h2,
+.skills h2,
+.experience h2 {
+    font-size: 3rem; /* Ajusta este valor según el tamaño deseado */
+    font-weight: 700;
+}
+
 /*navbar css*/
 .navbar {
     background-color: #2C3E50;
     color: #ECF0F1;
+    font-size:1.2rem;
 }
 
 
@@ -31,22 +34,46 @@ html {
     height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
 }
 
-.hero h3, .hero h2 {
-    font-size: 1.875rem;
+h1 {
+    font-size: clamp(2.3rem, 3vw, 4.5rem);
+    font-weight: 700;
 }
 
 
-h1{
-    font-size:3.6rem;
+/* Excepción para .hero h2, que ya tiene su estilo */
+.hero h2 {
+    font-size: clamp(3rem, 4vw, 5rem);
+    font-weight: 700;
 }
 
-.hero-desarrollador-imagen {
-    width: 20rem;
-    height: 25rem;
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 2rem)
 }
+
+.contact-info a {
+    text-decoration: none; 
+}
+
+.contact-info .icon {
+    width: 3rem; 
+    height: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-info .icon:hover {
+    transform: scale(1.2);
+}
+
+/*@media screen and (min-width: 700px) {
+    .hero-inferior-imagen {
+        max-width: 600px;
+    }
+}*/
+
+
 
 
 
@@ -72,18 +99,11 @@ h1{
     height: auto;
 }
 
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 576px) {
-    #skills img {
-        width: 50px;
-        height: auto;
-    }
-}
 
 /* Ajuste para pantallas medianas */
 @media (max-width: 768px) {
     #skills img {
-        width: 75px;
+        width: 60px;
         height: auto;
     }
 }
@@ -160,7 +180,7 @@ h1{
     cursor: pointer;
 }
 
-.footer .contact-info {
+.footer .contact-info{
     margin: auto 0; 
 }
 
