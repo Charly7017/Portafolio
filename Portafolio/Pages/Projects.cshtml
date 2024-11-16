@@ -5,64 +5,56 @@
     ViewData["Title"] = "Proyectos";
 }
 
-<ul class="nav nav-pills nav-fill mb-3">
-    <li style="background-color:#0d6efd" class="nav-item personalProjects">
-        <a class="nav-link text-white">Proyectos personales</a>
-    </li>
-    <li class="nav-item projectsInCompanies">
-        <a class="nav-link">Proyectos en empresas</a>
-    </li>
-</ul>
 
-<section id="projects" class="projects p-4">
+<section class="projects p-4">
     <div class="container">
-        <h1 class="text-center mb-4">Proyectos personales</h1>
-        <div class="row">
-            <div class="col-md-3 col-lg-4 mb-4">
-                <div class="card bg-light text-dark  shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title text-uppercase text-center">Manejador de tareas</h5>
-                        <p class="card-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Egestas taciti odio suscipit, luctus interdum inceptos luctus fames. Euismod dapibus laoreet purus quam metus nascetur fermentum. Tellus eget inceptos orci penatibus ipsum, dolor ex inceptos. Aliquam nisl placerat auctor dignissim condimentum ultrices odio nullam molestie. Odio ullamcorper duis justo cubilia lobortis imperdiet posuere.</p>
-                        <div class="mb-2">
-                            <span class="badge bg-success">MongoDB</span>
-                            <span class="badge bg-success">React</span>
-                            <span class="badge bg-success">Node.js</span>
-                            <span class="badge bg-success">Socket.io</span>
-                        </div>
-                        <a href="#" class="btn">Live</a>
-                        <a href="#" class="btn">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1 class="mb-3">Proyectos</h1>
+        <nav class="navigation mx-auto">
+            <ul class="nav-list">
+                <li class="active">
+                    <a href="#">
+                        <!-- svg -->
+                       Todos los proyectos
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- svg -->
+                        Web
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <!-- svg -->
+                        Movíl
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <!-- svg -->
+                        Mini proyectos
+                    </a>
+                </li>
+                <!-- more links -->
+                <div class="active-bar"></div>
+            </ul>
+        </nav>
     </div>
-
 </section>
 
-@section Scripts {
+@section Scripts{
     <script>
-        const personalProjects = $(".personalProjects");
-        const projectsInCompanies = $(".projectsInCompanies");
+        const list = document.querySelectorAll(".nav-list li");
+        const nav = document.querySelector(".navigation");
 
-        function setActiveTab(activeTab, inactiveTab) {
-            // Añadir la clase text-white al tab activo
-            activeTab.children().addClass("text-white");
-            activeTab.css("background-color", "#0d6efd");
-
-            // Quitar la clase text-white del tab inactivo
-            inactiveTab.children().removeClass("text-white");
-            inactiveTab.css("background-color", "white");
-            inactiveTab.children().css("color", "#0d6efd");
-        }
-
-        // Evento click para proyectos personales
-        personalProjects.click(function () {
-            setActiveTab(personalProjects, projectsInCompanies);
-        });
-
-        // Evento click para proyectos en empresas
-        projectsInCompanies.click(function () {
-            setActiveTab(projectsInCompanies, personalProjects);
+        list.forEach((item) => {
+            item.addEventListener("click", function (e) {
+                list.forEach((li) => li.classList.remove("active"));
+                e.currentTarget.classList.add("active");
+            });
         });
     </script>
 }
+
+
+

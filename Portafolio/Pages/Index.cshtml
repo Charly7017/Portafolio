@@ -12,7 +12,7 @@
         <h1>Carlos Santamaría</h1>
         <h2>Desarrollador de software</h2>
         <p>Apasionado por la tecnología y el desarrollo de soluciones innovadoras</p>
-        <div class="contact-info">
+        <div class="contact-info gap-5 d-flex justify-content-center">
             <a class="" target="_blank" href="https://www.linkedin.com/in/carlos-santamaria-solano-83703a1a6/">
                 <img class="icon" src="/Images/linkedin-icon.png" />
             </a>
@@ -26,8 +26,8 @@
                 <img class="icon" src="/Images/cv-icon.png" />
             </a>
         </div>
-@*         <img class="img-fluid hero-inferior-imagen d-none d-md-block" src="/Images/hero-inferior.svg" />
- *@    </div>
+        <a class="btn btn-primary mt-5" asp-page="/Projects">Explora mis proyectos</a>
+    </div>
 </section>
 
 
@@ -112,6 +112,17 @@
                 <p>Postman</p>
             </div>
         </div>
+        <h3>Otros Conocimientos</h3>
+        <div class="row justify-content-around">
+            <div class="col-3 col-md-2">
+                <img src="~/Images/android-icon.svg" />
+                <p>Desarollo android</p>
+            </div>
+            <div class="col-3 col-md-2">
+                <img src="~/Images/kotlin-icon.svg" />
+                <p>Kotlin</p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -162,21 +173,30 @@
 </section>
 
 
-<footer id="contact" class="footer text-white">
-    <div class="box">
-        <h2>Te interesó mi perfil?</h2>
-        <a href="mailto:alexrace18@gmail.com">Contáctame</a>
+<footer id="contact" class="footer text-white d-flex flex-column flex-lg-row justify-content-around align-items-center">
+    <span class="mb-3">Carlos Santamaría</span>
+    <div class="d-flex flex-column gap-2 mb-4">
+        <h3 class="mb-3">Navegación</h3>
+        <span>Sobre mí</span>
+        <span>Experiencia</span>
     </div>
-    <div class="contact-info d-flex">
-        <a class="rounded-circle" target="_blank" href="https://www.linkedin.com/in/carlos-santamaria-solano-83703a1a6/">
-            <i class="bi bi-linkedin social-icons"></i>
+    <div class="contact-info d-flex gap-3 mt-3">
+        <a class="" target="_blank" href="https://www.linkedin.com/in/carlos-santamaria-solano-83703a1a6/">
+            <img class="icon" src="/Images/linkedin-icon.png" />
         </a>
-        <a class="rounded-circle" target="_blank" href="https://github.com/Charly7017">
-            <i class="bi bi-github social-icons"></i>
-        </a> 
+        <a class="" target="_blank" href="https://github.com/Charly7017">
+            <img class="icon" src="/Images/github-icon.png" />
+        </a>
+        <a class="" target="_blank" href="mailto:your_email@example.com">
+            <img class="icon" src="/Images/mail-icon.png" />
+        </a>
+        <a class="" target="_blank" href="https://github.com/Charly7017">
+            <img class="icon" src="/Images/cv-icon.png" />
+        </a>
     </div>
-    <span class="text-center">Creado por Carlos Santamaría (2024) ©</span>
 </footer>
+
+
 
 
 

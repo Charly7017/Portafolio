@@ -15,7 +15,6 @@
     <Folder Include="Resources\Pages\Index\Contact\" />
     <Folder Include="Resources\Pages\Index\Hero\" />
     <Folder Include="Resources\Pages\Index\Projects\" />
-    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
   <ItemGroup>

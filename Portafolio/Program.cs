@@ -12,8 +12,6 @@ builder.Services.AddRazorPages().
     AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
     .AddDataAnnotationsLocalization();
 
-
-
 var app = builder.Build();
 
 var supportedCultures = new[] { "en", "es" };
