@@ -1,6 +1,4 @@
 
-
-
 html {
     font-size: 14px;
 }
@@ -14,4 +12,58 @@ html {
     min-height: 100%;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #0e0e2c;
+}
+
+.header__menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 80px; 
+}
+
+.header__menu-item {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff; 
+    transition: color 0.3s; 
+}
+
+.header__menu-item:hover {
+    cursor: pointer;
+}
+
+.header__menu-link {
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu-link:visited {
+    color: white; 
+}
+
+
+@media (max-width: 768px) {
+    .header__menu {
+        gap: 55px; 
+    }
+
+    .header__menu-item {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header__menu {
+        gap: 25px;
+    }
+
+    .header__menu-item {
+        font-size: 0.8rem; 
+    }
+}
 

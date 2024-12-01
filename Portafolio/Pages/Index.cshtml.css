@@ -8,19 +8,15 @@
     font-weight: 700;
 }
 
-/*navbar css*/
-.navbar {
-    background-color: #2C3E50;
-    color: #ECF0F1;
-    font-size: 1.2rem;
-}
 
 
 /*Hero css*/
 .hero {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
+    /*background-color: #1D1E33;*/
+    background-color: #0e0e2c;
 }
 
 h1 {
@@ -34,79 +30,135 @@ h1 {
 }
 
 .hero p {
-    font-size: clamp(1rem, 2vw, 2rem)
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 
-.contact-info a {
+.icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid #6a5acd;
+    border-radius: 50%;
+    color: #6a5acd;
+    font-size: 1.6rem;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
-.contact-info .icon {
-    width: 3rem;
-    height: 3rem;
-    transition: transform 0.3s ease;
+.icon-link:hover {
+    background-color: #6a5acd;
+    color: #fff;
 }
 
-.contact-info .icon:hover {
-    transform: scale(1.2);
-
-}
 
 
 /*About me section css*/
 
 .about-me {
-    background-color: #6E07F3;
+    background-color: #6b21fe; /*6E07F3*/
 }
 
-.descriptionAboutMe {
+.about-me__description {
     max-width: 800px;
 }
+
 
 /*Skills section*/
 
 /* Estilos generales para los íconos */
-#skills img {
-    width: 100px;
-    height: auto;
+
+.skills {
+    background-color: #1D1E33;
 }
 
+#skills p{
+    font-size:1.3rem;
+}
+
+img{
+    width:300px;
+}
+
+/*#skills img {
+    width: 10px;
+    height: auto;
+}*/
+
 /* Ajuste para pantallas medianas */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     #skills img {
         width: 60px;
         height: auto;
     }
-}
-
+}*/
 
 
 /*Experience section*/
 
-.experience-item {
-    background-color: #fff;
+.experience {
+    background-color: #0e0e2c;
 }
 
-.experience-date {
-    margin-bottom: 10px;
-    font-size: 0.85rem;
+.timeline {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 900px;
 }
 
-.experience-company {
-    margin-bottom: 10px;
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    border-left: 4px solid #6b21fe;
 }
 
-.experience-description {
-    margin: 0;
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #6b21fe;
+    border-radius: 50%;
+    border: 3px solid #fff;
 }
+
+.timeline-content {
+    background-color: #1a1a3d;
+    color: #fff;
+    border: 1px solid #6b21fe;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-content h3 {
+    color: #6b21fe;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.timeline-content p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color:#d1d1d1;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
 
 
 /*footer section*/
 
 .footer {
-    height: 400px;
-    background-color: #6E07F3;
-    /*    display: flex;
-    justify-content: space-around;
-    align-items: center;*/
+    min-height: 250px;
+    background-color: #6b21fe;
+}
+
+footer h2{
+    font-size:1.5rem;
 }
