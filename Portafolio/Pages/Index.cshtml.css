@@ -3,19 +3,17 @@
 /*General*/
 .about-me h2,
 .skills h2,
-.experience h2 {
+.experience h2,
+.highlightedProjects h2 {
     font-size: 2.5rem;
     font-weight: 700;
 }
-
-
 
 /*Hero css*/
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
-    /*background-color: #1D1E33;*/
     background-color: #0e0e2c;
 }
 
@@ -63,36 +61,6 @@ h1 {
 .about-me__description {
     max-width: 800px;
 }
-
-
-/*Skills section*/
-
-/* Estilos generales para los íconos */
-
-.skills {
-    background-color: #1D1E33;
-}
-
-#skills p{
-    font-size:1.3rem;
-}
-
-img{
-    width:300px;
-}
-
-/*#skills img {
-    width: 10px;
-    height: auto;
-}*/
-
-/* Ajuste para pantallas medianas */
-/*@media (max-width: 768px) {
-    #skills img {
-        width: 60px;
-        height: auto;
-    }
-}*/
 
 
 /*Experience section*/
@@ -143,12 +111,103 @@ img{
 .timeline-content p {
     margin: 0.5rem 0;
     font-size: 1rem;
-    color:#d1d1d1;
+    color: #d1d1d1;
 }
 
 .timeline-item:last-child {
     margin-bottom: 0;
 }
+
+/*HighlightedProjects section*/
+
+.highlightedProjects {
+    background-color: #0e0e2c; 
+}
+
+.highlightedProjects .cardProjects {
+    background: #1a1a3d;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 10px solid #6b21fe; 
+    border-bottom: 10px solid #6b21fe;
+    border-left: none;
+    border-right: none;
+}
+
+
+.highlightedProjects .cardProjects img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.highlightedProjects .cardProjects h5 {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+
+.highlightedProjects .cardProjects:hover {
+    transform: scale(1.03);
+    color: #6b21fe;
+}
+
+.btnProjects {
+    background-color: #6b21fe;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin: 2rem auto;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.btnProjects:hover {
+    background-color: #0e0e2c;
+    color: #6b21fe;
+    border: 1px solid #6b21fe;
+}
+
+
+
+
+/*Skills section*/
+
+.skills {
+    background-color: #1D1E33;
+}
+
+#skills p {
+    font-size: 1.3rem;
+}
+
+img {
+    width: 300px;
+}
+
+/*#skills img {
+    width: 10px;
+    height: auto;
+}*/
+
+/* Ajuste para pantallas medianas */
+/*@media (max-width: 768px) {
+    #skills img {
+        width: 60px;
+        height: auto;
+    }
+}*/
+
+
+
 
 
 
@@ -159,6 +218,6 @@ img{
     background-color: #6b21fe;
 }
 
-footer h2{
-    font-size:1.5rem;
+footer h2 {
+    font-size: 1.5rem;
 }

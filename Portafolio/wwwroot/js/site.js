@@ -73,7 +73,6 @@ ScrollReveal().reveal('.reveal-experience-title', {
     easing: 'ease-out'
 });
 
-// Animación para cada timeline item
 ScrollReveal().reveal('.reveal-experience', {
     distance: '50px',
     origin: 'left',
@@ -81,4 +80,34 @@ ScrollReveal().reveal('.reveal-experience', {
     delay: 200,
     easing: 'ease-out',
     interval: 200 // Retraso entre los elementos de la línea de tiempo
+});
+
+
+//Animation in Highlighted Projects section
+
+ScrollReveal().reveal('.reveal-projects-title', {
+    distance: '50px',
+    origin: 'top',
+    duration: 1000,
+    delay: 200,
+    easing: 'ease-out'
+});
+
+// Animación para las tarjetas de proyectos
+ScrollReveal().reveal('.reveal-card', {
+    distance: '50px',
+    origin: 'bottom',
+    duration: 800,
+    delay: 300,
+    interval: 200, // Retraso entre cada tarjeta
+    easing: 'ease-out'
+});
+
+// Animación para el botón "Ver proyectos"
+ScrollReveal().reveal('.reveal-btn', {
+    distance: '20px',
+    origin: 'bottom',
+    duration: 1000,
+    delay: 800,
+    easing: 'ease-out'
 });
