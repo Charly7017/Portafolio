@@ -93,21 +93,51 @@ ScrollReveal().reveal('.reveal-projects-title', {
     easing: 'ease-out'
 });
 
-// Animación para las tarjetas de proyectos
 ScrollReveal().reveal('.reveal-card', {
     distance: '50px',
     origin: 'bottom',
     duration: 800,
     delay: 300,
-    interval: 200, // Retraso entre cada tarjeta
+    interval: 200, 
     easing: 'ease-out'
 });
 
-// Animación para el botón "Ver proyectos"
 ScrollReveal().reveal('.reveal-btn', {
     distance: '20px',
     origin: 'bottom',
     duration: 1000,
-    delay: 800,
+    delay: 200,
     easing: 'ease-out'
 });
+
+
+//Animation in Skills section
+
+ScrollReveal().reveal('.reveal-skills-title', {
+    distance: '50px',
+    origin: 'top',
+    duration: 1000,
+    delay: 200,
+    easing: 'ease-out'
+});
+
+// Animación para cada sección (Frontend, Backend, etc.)
+ScrollReveal().reveal('.reveal-skills-section', {
+    distance: '30px',
+    origin: 'left',
+    duration: 800,
+    delay: 400,
+    interval: 200, // Retraso entre secciones
+    easing: 'ease-out'
+});
+
+// Animación para los íconos y textos de habilidades
+ScrollReveal().reveal('.reveal-skills-items .col', {
+    distance: '20px',
+    origin: 'bottom',
+    duration: 800,
+    delay: 200,
+    interval: 100, // Retraso entre íconos
+    easing: 'ease-out'
+});
+
