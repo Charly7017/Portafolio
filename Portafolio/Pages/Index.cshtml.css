@@ -1,14 +1,4 @@
 ﻿
-
-/*General*/
-.about-me h2,
-.skills h2,
-.experience h2,
-.highlightedProjects h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
 /*Hero css*/
 .hero {
     height: 100vh;
@@ -196,7 +186,8 @@ h1 {
 }
 
 
-/*footer section*/
+
+/*Footer section*/
 
 .footer {
     background-color: #6b21fe;
@@ -214,14 +205,13 @@ footer a {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-footer a:hover {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
-}
+    footer a:hover {
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
 
 footer i {
     font-size: 1.5rem;
 }
-
 
 
 

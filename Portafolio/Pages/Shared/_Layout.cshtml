@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Portafolio</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/general.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Portafolio.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+
+
     <header class="header p-4">
         <nav class="header__nav">
             <ul class="header__menu ">
@@ -21,15 +23,15 @@
         </nav>
     </header>
 
-    <div class="">
-        <main role="main" class="pb-3">
+    <main role="main" class="pb-3 mb-0">
             @RenderBody()
-        </main>
-    </div>
+    </main>
+
+
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="~/js/ScrollRevealAnimations.js" asp-append-version="true"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

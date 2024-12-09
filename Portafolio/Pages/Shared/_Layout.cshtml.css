@@ -1,48 +1,67 @@
 ﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+
+
+/*Header css*/
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #0e0e2c;
 }
 
-a {
-  color: #0077cc;
+.header__menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 80px;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.header__menu-item {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: color 0.3s;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    .header__menu-item:hover {
+        cursor: pointer;
+    }
+
+.header__menu-link {
+    color: white;
+    text-decoration: none;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+.header__menu-link:visited {
+    color: white;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+
+@media (max-width: 768px) {
+    .header__menu {
+        gap: 55px;
+    }
+
+    .header__menu-item {
+        font-size: 0.9rem;
+    }
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+@media (max-width: 480px) {
+    .header__menu {
+        gap: 25px;
+    }
+
+    .header__menu-item {
+        font-size: 0.8rem;
+    }
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
-}
+
+
+
+
+
