@@ -132,7 +132,6 @@ h1 {
 .highlightedProjects .cardProjects img {
     width: 100%;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
 }
 
 .highlightedProjects .cardProjects h5 {
@@ -178,12 +177,12 @@ h1 {
     margin-top:0.5rem;
 }
 
-#skills .singleCol {
+/*#skills .singleCol {
     padding: 1rem;
     border:none;
     background-color: #1a1a3d;
     border-radius:10px;
-}
+}*/
 
 
 

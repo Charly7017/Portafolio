@@ -123,3 +123,52 @@ h1 {
         display: none;
     }
 }
+
+
+
+.cardProjects {
+    background: #1a1a3d;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 10px solid #6b21fe;
+    border-bottom: 10px solid #6b21fe;
+    border-left: none;
+    border-right: none;
+}
+
+.cardProjects img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.cardProjects h5 {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+
+
+.btnGithub {
+    background-color: #6b21fe;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin: 2rem auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnGithub:hover {
+    background-color: #0e0e2c;
+    color: #6b21fe;
+    border: 1px solid #6b21fe;
+}
+
