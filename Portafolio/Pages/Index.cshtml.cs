@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Localization;
+using Portafolio.Models;
+using System;
 
 namespace Portafolio.Pages
 {
@@ -18,7 +20,6 @@ namespace Portafolio.Pages
 
         public void OnGet()
         {
-            
 
         }
 
