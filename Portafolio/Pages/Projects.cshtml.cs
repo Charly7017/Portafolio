@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Portafolio.Models;
+using System.Linq;
 
 namespace Portafolio.Pages
 {
@@ -8,43 +9,66 @@ namespace Portafolio.Pages
     {
         public List<Project> Projects { get; set; } = new List<Project>();
 
-        public void OnGet()
+
+        [BindProperty(SupportsGet = true)]
+        public ProjectCategory Type { get; set; }
+
+        public IActionResult OnGet()
         {
-            Projects = GetProjects();
+
+            var allProjects = GetProjects();
+
+
+            if (Type == ProjectCategory.All)
+            {
+                Projects = allProjects;
+            }
+            else
+            {
+                Projects = allProjects.Where(p => p.Category == Type).ToList();
+            }
+
+            if(HttpContext.Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return new JsonResult(Projects);
+            }
+
+            return Page();
+
         }
 
         private List<Project> GetProjects()
         {
-            var list = new List<Project>()
+            return new List<Project>
             {
-                new Project()
+                new Project
                 {
-                    Name = "Sistema de reservas",
-                    Description="Sistema que reserva cosas",
-                    Technologies="HTML, CSS, BOOSTRAP, APS.NET, KNOCKOUT"
+                    Name = "Manejador de tareas",
+                    Description = "Sistema que permite a los usuarios gestionar tareas, anexar archivos y registrar pasos detallados.",
+                    Technologies = "HTML, CSS, BOOSTRAP, APS.NET, JQUERY, KNOCKOUT.js",
+                    ImageUrl = "/Images/TaskManagerImage.png",
+                    GithubLink = "https://github.com/Charly7017/ManejoTareas",
+                    Category = ProjectCategory.Web
                 },
                 new Project
                 {
-                    Name = "Gestión de inventarios",
-                    Description = "Sistema que gestiona inventarios",
-                    Technologies = "C#, SQL, ENTITY FRAMEWORK"
+                    Name = "Sistema de cuentas por pagar",
+                    Description = "Permite un control detallado de las facturas recibidas, los pagos pendientes y las fechas de vencimiento.",
+                    Technologies = "HTML, CSS, BOOTSTRAP, ASP.NET, JQUERY",
+                    ImageUrl = "/Images/accountspayablesystemImage.png",
+                    GithubLink = "https://github.com/Charly7017/CuentasPorPagar",
+                    Category = ProjectCategory.Web
                 },
                 new Project
                 {
-                    Name = "Gestion de usuarios",
-                    Description = "Sistema que gestiona usuarios",
-                    Technologies = "C#, SQL, ENTITY FRAMEWORK,.net"
-                },
-                new Project
-                {
-                    Name = "Gestion de contenedores",
-                    Description = "Sistema que gestiona contenedores",
-                    Technologies = "C#, SQL, ENTITY FRAMEWORK,.net,knockout"
+                    Name = "Super Hero App",
+                    Description = "Aplicación móvil para gestionar héroes.",
+                    Technologies = "Xamarin, .NET",
+                    ImageUrl = "",
+                    GithubLink = "https://github.com/Charly7017/SuperHeroApp",
+                    Category = ProjectCategory.Mobile
                 }
             };
-
-            return list;
         }
-
     }
 }

@@ -18,35 +18,28 @@
 </head>
 <body>
 
-
-   
-
     <section class="projects p-4">
         <div class="container text-center">
-            <h1 class="mb-3">Proyectos</h1>
-            <nav class="navigation mx-auto">
+            <h1 class="mb-3 reveal-projects-title">Proyectos</h1>
+            <nav class="navigation mx-auto reveal-projects-nav">
                 <ul class="nav-list">
                     <li class="active">
-                        <a href="#">
-                            <!-- svg -->
+                        <a href="#" class="btnBringAllProjects">
                             Todos los proyectos
                         </a>
                     </li>
                     <li>
-                        <a href="#web">
-                            <!-- svg -->
+                        <a href="#web" class="btnBringWebProjects">
                             Web
                         </a>
                     </li>
                     <li>
-                        <a href="#mobile">
-                            <!-- svg -->
+                        <a href="#mobile" class="btnBringMobileProjects">
                             Móvil
                         </a>
                     </li>
                     <li>
                         <a href="#mini">
-                            <!-- svg -->
                             Mini proyectos
                         </a>
                     </li>
@@ -55,30 +48,28 @@
                 </ul>
             </nav>
 
-
-
-           
-                <div class="row row-cols-1 row-cols-lg-2 mb-4 reveal-projects-row gy-5  mt-4 text-white">
-                     @foreach (var project in Model.Projects)
-                    {
-                        <div class="col">
-                            <div class="cardProjects">
-                                <img src="/Images/sampleImg.png" alt="Project Image">
-                                <h5>@project.Name</h5>
-                                <p>@project.Description</p>
-                                <p>@project.Technologies</p>
-                                <a target="_blank" class="btnGithub" href="https://github.com/Charly7017"><i class="bi bi-github"></i></a>
-                            </div>
+            <div id="results" class="row row-cols-1 row-cols-lg-2 mb-4 reveal-projects-row gy-5 mt-4 text-white">
+                @foreach (var project in Model.Projects)
+                {
+                    <div class="col reveal-project">
+                        <div class="cardProjects">
+                            <img src="@project.ImageUrl" alt="Project Image">
+                            <h5>@project.Name</h5>
+                            <p>@project.Description</p>
+                            <p>@project.Technologies</p>
+                            <a target="_blank" class="btnGithub" href="@project.GithubLink"><i class="bi bi-github"></i></a>
                         </div>
-                     }
-                </div>
-            
-
+                    </div>
+                }
+            </div>
 
         </div>
     </section>
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/Projects.js" asp-append-version="true"></script>
 
-    <script src="~/js/ProjectsAnimationNav.js" asp-append-version="true"></script>
 </body>
 </html>
+
+

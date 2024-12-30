@@ -121,23 +121,23 @@ ScrollReveal().reveal('.reveal-skills-title', {
     easing: 'ease-out'
 });
 
-// Animación para cada sección (Frontend, Backend, etc.)
+
 ScrollReveal().reveal('.reveal-skills-section', {
     distance: '30px',
     origin: 'left',
     duration: 800,
     delay: 400,
-    interval: 200, // Retraso entre secciones
+    interval: 200, 
     easing: 'ease-out'
 });
 
-// Animación para los íconos y textos de habilidades
+
 ScrollReveal().reveal('.reveal-skills-items .col', {
     distance: '20px',
     origin: 'bottom',
     duration: 800,
     delay: 200,
-    interval: 100, // Retraso entre íconos
+    interval: 100, 
     easing: 'ease-out'
 });
 
