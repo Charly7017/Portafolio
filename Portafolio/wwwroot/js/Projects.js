@@ -2,112 +2,72 @@
 const nav = document.querySelector(".navigation");
 
 const btnBringWebProjects = $(".btnBringWebProjects")
+var projects = " ";
 
-
-
-
-$(".btnBringAllProjects").click(function (event) {
-    event.preventDefault();
-
-    $.ajax({
-        url: "/Projects?type=All", // Pasa el parámetro 'type' en la URL
-        type: "GET",
-        cache: false,
-        success: function (data) {
-            $("#results").empty();
-            data.forEach(function (project) {
-                const projectHTML = `
-                    <div class="col reveal-project">
-                        <div class="cardProjects">
-                            <img src="${project.imageUrl}" alt="Project Image">
-                            <h5>${project.name}</h5>
-                            <p>${project.description}</p>
-                            <p>${project.technologies}</p>
-                            <a target="_blank" class="btnGithub" href="${project.githubLink}">
-                                <i class="bi bi-github"></i>
-                            </a>
-                        </div>
-                    </div>`;
-                $("#results").append(projectHTML);
-            });
-        },
-        error: function (xhr, status, error) {
-            console.error("Error al cargar los proyectos:", error);
-            alert("Hubo un error al cargar los proyectos.");
+$(".navigation").click(async function (e) {
+    if ($(e.target).hasClass("btnBringWebProjects")) {
+        try {
+            projects = await bringData("Web");
+            printData()
+        } catch (error) {
+            console.error("Error:", error);
         }
-    });
+    }
+    else if ($(e.target).hasClass("btnBringMobileProjects")) {
+        try {
+            projects = await bringData("Mobile");
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+    else if ($(e.target).hasClass("btnBringAllProjects")) {
+        try {
+            projects = await bringData("All");
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+
+    printData(projects)
+
 });
 
+async function bringData(type) {
+    try {
+        const response = await $.ajax({
+            url: `/Projects?type=${type}`,
+            type: "GET",
+            cache: false,
+        });
+        return response;
+    } catch (error) {
+        console.error("Error al cargar los proyectos:", error);
+        alert("Hubo un error al cargar los proyectos.");
+        throw error;
+    }
+}
 
+function printData(projects) {
 
-$(".btnBringWebProjects").click(function (event) {
-    event.preventDefault();
+    $("#results").empty();
 
-    $.ajax({
-        url: "/Projects?type=Web", // Pasa el parámetro 'type' en la URL
-        type: "GET",
-        cache: false,
-        success: function (data) {
-            $("#results").empty();
-            data.forEach(function (project) {
-                const projectHTML = `
-                    <div class="col reveal-project">
-                        <div class="cardProjects">
-                            <img src="${project.imageUrl}" alt="Project Image">
-                            <h5>${project.name}</h5>
-                            <p>${project.description}</p>
-                            <p>${project.technologies}</p>
-                            <a target="_blank" class="btnGithub" href="${project.githubLink}">
-                                <i class="bi bi-github"></i>
-                            </a>
-                        </div>
-                    </div>`;
-                $("#results").append(projectHTML);
-            });
-        },
-        error: function (xhr, status, error) {
-            console.error("Error al cargar los proyectos:", error);
-            alert("Hubo un error al cargar los proyectos.");
-        }
+    projects.forEach(function (project) {
+        const projectHTML = `
+            <div class="col reveal-project">
+                <div class="cardProjects">
+                    <img src="${project.imageUrl}" alt="Project Image">
+                    <h5>${project.name}</h5>
+                    <p>${project.description}</p>
+                    <p>${project.technologies}</p>
+                    <a target="_blank" class="btnGithub" href="${project.githubLink}">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+          </div>`
+        ;
+        $("#results").append(projectHTML);
     });
-});
-
-
-$(".btnBringMobileProjects").click(function (event) {
-    event.preventDefault();
-
-    $.ajax({
-        url: "/Projects?type=Mobile", // Pasa el parámetro 'type' en la URL
-        type: "GET",
-        cache: false,
-        success: function (data) {
-            $("#results").empty();
-            data.forEach(function (project) {
-                const projectHTML = `
-                    <div class="col reveal-project">
-                        <div class="cardProjects">
-                            <img src="${project.imageUrl}" alt="Project Image">
-                            <h5>${project.name}</h5>
-                            <p>${project.description}</p>
-                            <p>${project.technologies}</p>
-                            <a target="_blank" class="btnGithub" href="${project.githubLink}">
-                                <i class="bi bi-github"></i>
-                            </a>
-                        </div>
-                    </div>`;
-                $("#results").append(projectHTML);
-            });
-        },
-        error: function (xhr, status, error) {
-            console.error("Error al cargar los proyectos:", error);
-            alert("Hubo un error al cargar los proyectos.");
-        }
-    });
-});
-
-
-
-
+}
 
 
 list.forEach((item) => {
