@@ -5,10 +5,10 @@ const btnBringWebProjects = $(".btnBringWebProjects")
 var projects = " ";
 
 $(".navigation").click(async function (e) {
+
     if ($(e.target).hasClass("btnBringWebProjects")) {
         try {
             projects = await bringData("Web");
-            printData()
         } catch (error) {
             console.error("Error:", error);
         }
@@ -26,6 +26,24 @@ $(".navigation").click(async function (e) {
         } catch (error) {
             console.error("Error:", error);
         }
+    }
+    else if ($(e.target).hasClass("btnBringMiniProjects")) {
+        $("#results").empty();
+        const miniProjectsHTML = `
+            <div class="col reveal-project">
+                <div class="cardProjects">
+                    <img src="" alt="Project Image">
+                    <h5>Mini proyectos</h5>
+                    <p>En este repositorio mostrare mini proyectos que he hecho</p>
+                    <p>HTML, CSS, JAVASCRIPT, jQuery</p>
+                    <a target="_blank" class="btnGithub" href="https://github.com/Charly7017/MiniProjects">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+          </div>`
+            ;
+        $("#results").append(miniProjectsHTML);
+        return
     }
 
     printData(projects)
@@ -48,7 +66,6 @@ async function bringData(type) {
 }
 
 function printData(projects) {
-
     $("#results").empty();
 
     projects.forEach(function (project) {
