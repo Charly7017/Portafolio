@@ -5,45 +5,50 @@ const btnBringWebProjects = $(".btnBringWebProjects")
 var projects = " ";
 
 $(".navigation").click(async function (e) {
+    const target = $(e.target).closest("li"); // Asegura que apunte al `li`
+    const navSibling = $(e.target.parentElement.parentElement.parentElement.nextElementSibling)
 
-    if ($(e.target).hasClass("btnBringWebProjects")) {
+    if (target.hasClass("btnBringWebProjects")) {
+        navSibling.removeClass("justify-content-center")
         try {
             projects = await bringData("Web");
         } catch (error) {
             console.error("Error:", error);
         }
     }
-    else if ($(e.target).hasClass("btnBringMobileProjects")) {
+    else if (target.hasClass("btnBringMobileProjects")) {
+        navSibling.removeClass("justify-content-center")
         try {
             projects = await bringData("Mobile");
         } catch (error) {
             console.error("Error:", error);
         }
     }
-    else if ($(e.target).hasClass("btnBringAllProjects")) {
+    else if (target.hasClass("btnBringAllProjects")) {
+        navSibling.removeClass("justify-content-center")
         try {
             projects = await bringData("All");
         } catch (error) {
             console.error("Error:", error);
         }
     }
-    else if ($(e.target).hasClass("btnBringMiniProjects")) {
+    else if (target.hasClass("btnBringMiniProjects")) {
         $("#results").empty();
         const miniProjectsHTML = `
-            <div class="col reveal-project">
-                <div class="cardProjects">
-                    <img src="" alt="Project Image">
-                    <h5>Mini proyectos</h5>
-                    <p>En este repositorio mostrare mini proyectos que he hecho</p>
-                    <p>HTML, CSS, JAVASCRIPT, jQuery</p>
-                    <a target="_blank" class="btnGithub" href="https://github.com/Charly7017/MiniProjects">
-                        <i class="bi bi-github"></i>
-                    </a>
-                </div>
-          </div>`
-            ;
+        <div class="col reveal-project">
+            <div class="cardProjects">
+                <img src="" alt="Project Image">
+                <h5>Mini proyectos</h5>
+                <p>En este repositorio mostrare mini proyectos que he hecho</p>
+                <p>HTML, CSS, JAVASCRIPT, jQuery</p>
+                <a target="_blank" class="btnGithub" href="https://github.com/Charly7017/MiniProjects">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </div>`;
         $("#results").append(miniProjectsHTML);
-        return
+        navSibling.addClass("justify-content-center")
+        return;
     }
 
     printData(projects)
