@@ -11,14 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Pages\Index\Experience\" />
-    <Folder Include="Resources\Pages\Index\Contact\" />
-    <Folder Include="Resources\Pages\Index\Hero\" />
-    <Folder Include="Resources\Pages\Index\Projects\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Resources\Pages\Index\Index.es.resx" />
+    <None Include="Resources\Pages\Index.es.resx" />
   </ItemGroup>
 
   <ItemGroup>

@@ -129,4 +129,7 @@
   <data name="ProjectsNavbar" xml:space="preserve">
     <value>Proyectos</value>
   </data>
+  <data name="SkillsNavbar" xml:space="preserve">
+    <value>Habilidades</value>
+  </data>
 </root>

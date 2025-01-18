@@ -117,13 +117,78 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Greetings" xml:space="preserve">
-    <value>Hi, I am Carlos Santamaria</value>
+  <data name="Experience" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="MeetDescription" xml:space="preserve">
+    <value>My journey began during my studies in Computer Systems Engineering, where I had the opportunity to complete professional internships at two companies. My experience focused on the development of web and mobile projects, applying my knowledge to create efficient solutions tailored to users' needs. Although I am at the beginning of my career, my passion for programming has driven me to be self-taught, always seeking to improve my technical skills while acquiring new knowledge.</value>
+  </data>
+  <data name="MeetMeTitle" xml:space="preserve">
+    <value>Meet me</value>
   </data>
   <data name="Phrase" xml:space="preserve">
-    <value>Passionate about creating innovative solutions</value>
+    <value>Passion for technology and development of innovative solutions</value>
   </data>
-  <data name="Specialities" xml:space="preserve">
-    <value>Web and Mobile developer</value>
+  <data name="SoftwareDeveloper" xml:space="preserve">
+    <value>Software Developer</value>
+  </data>
+  <data name="JrDeveloper" xml:space="preserve">
+    <value>Jr Developer</value>
+  </data>
+  <data name="Intern" xml:space="preserve">
+    <value>Trainee</value>
+  </data>
+  <data name="SharksiaExperience" xml:space="preserve">
+    <value>I currently work as a junior developer, where I am responsible for developing and implementing new features in web applications, contributing to their continuous improvement and evolution. I am also in charge of receiving problem reports, analyzing application failures, identifying the root cause of errors, and implementing the necessary adjustments to fix them, ensuring the proper functioning of the system.</value>
+  </data>
+  <data name="TamsaExperience" xml:space="preserve">
+    <value>
+        I developed web and .NET applications using C#, covering projects in MAUI App, MVC App, and Web API.
+    </value>
+  </data>
+  <data name="EhecatlExperience" xml:space="preserve">
+    <value>
+		I was trained in the fundamentals of web development, acquiring knowledge in
+        frontend, backend, and databases.
+    </value>
+  </data>
+  <data name="ProjectsTitle" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="BookingSystem" xml:space="preserve">
+    <value>Booking system</value>
+  </data>
+  <data name="TaskManager" xml:space="preserve">
+    <value>Task manager</value>
+  </data>
+  <data name="PayTrack" xml:space="preserve">
+    <value>Pay track</value>
+  </data>
+  <data name="SeeMoreProjects" xml:space="preserve">
+    <value>See more projects</value>
+  </data>
+  <data name="SkillsTitle" xml:space="preserve">
+    <value>Skills</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="OtherSkills" xml:space="preserve">
+    <value>Other skills</value>
+  </data>
+  <data name="AugustMonth" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="JulyMonth" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="JuneMonth" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="NowTime" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="SeptemberMonth" xml:space="preserve">
+    <value>September</value>
   </data>
 </root>

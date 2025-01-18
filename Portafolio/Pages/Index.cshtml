@@ -7,13 +7,12 @@
     ViewData["Title"] = "Mi portafolio";
 }
 
-
 <section class="hero p-4">
     <div class="container text-center text-white">
         <h1 class="hero-title">Carlos Santamaría</h1>
-        <h2 class="hero-subtitle">Desarrollador de software</h2>
+        <h2 class="hero-subtitle">@Localizer["SoftwareDeveloper"]</h2>
         <p class="hero-description">
-            Pasión por la tecnología y desarrollo de soluciones innovadoras
+            @Localizer["Phrase"]
         </p>
         <div class="contact-info gap-4 d-flex justify-content-center mt-4 mb-4 reveal-contact">
             <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/carlos-santamaria-solano-83703a1a6/">
@@ -32,55 +31,44 @@
     </div>
 </section>
 
-
-
 <section id="aboutMe" class="about-me p-4 text-white">
     <div class="about-me__container container">
-        <h2 class="about-me__title text-center reveal-title">Conóceme</h2>
+        <h2 class="about-me__title text-center reveal-title">@Localizer["MeetMeTitle"]</h2>
         <p class="about-me__description mx-auto lead reveal-description">
-            Mi trayectoria comenzó durante mis estudios de Ingeniería en Sistemas Computacionales, donde tuve la oportunidad de realizar prácticas profesionales en dos empresas.
-            Mi experiencia fue en el desarrollo de proyectos web y móviles, aplicando mis conocimientos para crear soluciones eficientes y adaptadas a las necesidades de los usuarios.
-            Aunque estoy en el inicio de mi carrera, mi pasión por la programación me ha llevado a ser autodidacta, siempre buscando mejorar mis habilidades técnicas y al mismo tiempo adquirir nuevos conocimientos.
+            @Localizer["MeetDescription"]
         </p>
     </div>
 </section>
 
-
-
 <section id="experience" class="experience p-4 text-white">
     <div class="container">
-        <h2 class="text-center mb-4 reveal-experience-title">Experiencia</h2>
+        <h2 class="text-center mb-4 reveal-experience-title">@Localizer["Experience"]</h2>
         <div class="timeline">
             <!-- Desarrollador Jr -->
             <div class="timeline-item reveal-experience">
                 <div class="timeline-content p-4">
-                    <h3>Desarrollador Jr</h3>
-                    <p><strong>SHARKSIA</strong> • Agosto 2024 - Presente</p>
+                    <h3>@Localizer["JrDeveloper"]</h3>
+                    <p><strong>SHARKSIA</strong> • @Localizer["AugustMonth"] 2024 - @Localizer["NowTime"]</p>
                     <p>
-                        Actualmente, trabajo como desarrollador junior, donde soy responsable de
-                        brindar soporte técnico a otra empresa. Mi principal tarea consiste en recibir
-                        reportes de problemas, analizar fallos en aplicaciones web, identificar
-                        la causa raíz de los errores e implementar los ajustes necesarios para corregirlos,
-                        asegurando así el correcto funcionamiento del sistema.
+                        @Localizer["SharksiaExperience"]
                     </p>
                 </div>
             </div>
             <!-- Prácticante en TAMSA -->
             <div class="timeline-item reveal-experience">
                 <div class="timeline-content p-4">
-                    <h3>Prácticante</h3>
-                    <p><strong>Tubos de Acero de México SA (TAMSA)</strong> • Agosto 2023 - Julio 2024</p>
-                    <p>Desarrollé aplicaciones web y .NET utilizando C#, abarcando proyectos en MAUI App, MVC App y Web API.</p>
+                    <h3>@Localizer["Intern"]</h3>
+                    <p><strong>Tubos de Acero de México SA (TAMSA)</strong> • @Localizer["AugustMonth"] 2023 - @Localizer["JulyMonth"] 2024</p>
+                    <p>@Localizer["TamsaExperience"]</p>
                 </div>
             </div>
             <!-- Prácticante en Ehecatl -->
             <div class="timeline-item reveal-experience">
                 <div class="timeline-content p-4">
-                    <h3>Prácticante</h3>
-                    <p><strong>Servicios de Software Ehecatl</strong> • Junio 2022 - Septiembre 2022</p>
+                    <h3>@Localizer["Intern"]</h3>
+                    <p><strong>Servicios de Software Ehecatl</strong> • @Localizer["JuneMonth"] 2022 - @Localizer["SeptemberMonth"] 2022</p>
                     <p>
-                        Fui capacitado con los fundamentos del desarrollo web, adquirí
-                        conocimientos de frontend, backend y bases de datos.
+                        @Localizer["EhecatlExperience"]
                     </p>
                 </div>
             </div>
@@ -88,41 +76,38 @@
     </div>
 </section>
 
-
 <section id="highlightedProjects" class="highlightedProjects p-4 text-white">
     <div class="container">
-        <h2 class="text-center mb-4 reveal-projects-title">Proyectos Destacados</h2>
+        <h2 class="text-center mb-4 reveal-projects-title">@Localizer["ProjectsTitle"]</h2>
         <div class="row row-cols-1 row-cols-lg-3 mb-4 reveal-projects-row gy-3">
             <div class="col">
                 <div class="cardProjects reveal-card">
                     <img src="/Images/sampleImg.png" alt="Project Image">
-                    <h5>Gestor de Tareas</h5>
+                    <h5>@Localizer["BookingSystem"]</h5>
                 </div>
             </div>
             <div class="col">
                 <div class="cardProjects reveal-card">
                     <img src="/Images/sampleImg.png" alt="Project Image">
-                    <h5>Otro Proyecto</h5>
+                    <h5>@Localizer["TaskManager"]</h5>
                 </div>
             </div>
             <div class="col">
                 <div class="cardProjects reveal-card">
                     <img src="/Images/sampleImg.png" alt="Project Image">
-                    <h5>Otro Proyecto</h5>
+                    <h5>@Localizer["PayTrack"]</h5>
                 </div>
             </div>
         </div>
         <div class="d-flex justify-content-center">
-            <a href="/Projects" class="btnProjects reveal-btn">Ver proyectos</a>
+            <a href="/Projects" class="btnProjects reveal-btn">@Localizer["SeeMoreProjects"]</a>
         </div>
     </div>
 </section>
 
-
-
 <section id="skills" class="p-4 skills">
     <div class="container text-center text-white">
-        <h2 class="mb-3 reveal-skills-title">Habilidades</h2>
+        <h2 class="mb-3 reveal-skills-title">@Localizer["SkillsTitle"]</h2>
 
         <h3 class="mb-4 reveal-skills-section">Frontend</h3>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 reveal-skills-items">
@@ -163,12 +148,12 @@
                 <p>ASP.NET</p>
             </div>
             <div class="col">
-                <img src="~/Images/jquery.icon.svg" />
+                <img src="~/Images/sql-icon.svg" />
                 <p>SQL</p>
             </div>
         </div>
         <hr />
-        <h3 class="mb-4 reveal-skills-section">Herramientas</h3>
+        <h3 class="mb-4 reveal-skills-section">@Localizer["Tools"]</h3>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 reveal-skills-items">
             <div class="col">
                 <img src="~/Images/git-icon.svg" />
@@ -192,11 +177,11 @@
             </div>
         </div>
         <hr />
-        <h3 class="mb-4 reveal-skills-section">Otros Conocimientos</h3>
+        <h3 class="mb-4 reveal-skills-section">@Localizer["OtherSkills"]</h3>
         <div class="row row-cols-2 reveal-skills-items">
             <div class="col">
                 <img src="~/Images/android-icon.svg" />
-                <p>Desarollo android</p>
+                <p>Android</p>
             </div>
             <div class="col">
                 <img src="~/Images/kotlin-icon.svg" />
@@ -206,12 +191,7 @@
     </div>
 </section>
 
-
 <footer id="contact" class="footer text-white d-flex align-items-center justify-content-between justify-content-md-around p-4">
     <h2 class="mb-3"><i class="bi bi-c-circle"></i> 2024 | Carlos Santamaría</h2>
     <a href="#" class="p-3"><i class="bi bi-arrow-up"></i></a>
 </footer>
-
-
-
-

@@ -1,14 +1,11 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-
-
-/*Header css*/
-
+﻿/* Header CSS */
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #0e0e2c;
+    padding: 10px;
+    position: relative; /* Necesario para posicionar el botón de hamburguesa */
 }
 
 .header__menu {
@@ -26,9 +23,9 @@ header {
     transition: color 0.3s;
 }
 
-    .header__menu-item:hover {
-        cursor: pointer;
-    }
+.header__menu-item:hover {
+    cursor: pointer;
+}
 
 .header__menu-link {
     color: white;
@@ -39,20 +36,44 @@ header {
     color: white;
 }
 
+/* Estilos del botón hamburguesa */
+.header__hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-around;
+    align-items: center;
+    height: 25px;
+    width: 35px;
+    position: absolute; /* Posicionamiento absoluto */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    top: 20px; /* Ajusta la distancia desde el borde superior */
+}
 
-@media (max-width: 768px) {
+.header__hamburger .bar {
+    height: 4px;
+    width: 30px;
+    background-color: white;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 868px) {
     .header__menu {
-        gap: 55px;
+        display: none; 
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .header__menu-item {
-        font-size: 0.9rem;
+    .header__hamburger {
+        display: flex; /* Mostrar el botón hamburguesa en pantallas pequeñas */
     }
 }
 
+/* Ajustes para pantallas aún más pequeñas */
 @media (max-width: 480px) {
     .header__menu {
-        gap: 25px;
+        gap: 15px;
     }
 
     .header__menu-item {
@@ -60,8 +81,6 @@ header {
     }
 }
 
-
-
-
-
-
+.header__menu.active {
+    display: flex; /* Muestra el menú cuando está activo */
+}

@@ -11,17 +11,35 @@
 </head>
 <body>
 
-
     <header class="header p-4">
-        <nav class="header__nav">
-            <ul class="header__menu ">
-                <li class="header__menu-item"><a href="#aboutMe" class="header__menu-link">Sobre mi</a></li>
-                <li class="header__menu-item"><a href="#experience" class="header__menu-link">Experiencia</a></li>
-                <li class="header__menu-item"><a href="#highlightedProjects" class="header__menu-link">Proyectos</a></li>
-                <li class="header__menu-item"><a href="#skills" class="header__menu-link">Habilidades</a></li>
+    <nav class="header__nav">
+        <ul class="header__menu">
+            <li class="header__menu-item"><a href="#aboutMe" class="header__menu-link">@Localizer["AboutMeNavbar"]</a></li>
+            <li class="header__menu-item"><a href="#experience" class="header__menu-link">@Localizer["ExperienceNavbar"]</a></li>
+            <li class="header__menu-item"><a href="#highlightedProjects" class="header__menu-link">@Localizer["ProjectsNavbar"]</a></li>
+            <li class="header__menu-item"><a href="#skills" class="header__menu-link">@Localizer["SkillsNavbar"]</a></li>
+             <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white h4 rounded px-3 py-2" href="#" 
+                       id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        @Thread.CurrentThread.CurrentUICulture.Name
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/Lang?culture=en">English</a></li>
+                        <li><a class="dropdown-item" href="/Lang?culture=es">Español</a></li>
+                    </ul>
+                </li>
             </ul>
+        </ul>
+            <div class="header__hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
-    </header>
+</header>
+
+
 
     <main role="main" class="pb-3 mb-0">
             @RenderBody()
@@ -30,6 +48,7 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="~/js/ScrollRevealAnimations.js" asp-append-version="true"></script>
+    <script src="~/js/HeaderAnimation.js" asp-append-version="true"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
