@@ -75,10 +75,6 @@ header {
     .header__menu {
         gap: 15px;
     }
-
-    .header__menu-item {
-        font-size: 0.8rem;
-    }
 }
 
 .header__menu.active {

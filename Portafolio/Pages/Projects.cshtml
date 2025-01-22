@@ -19,31 +19,48 @@
 <body>
 
     <section class="projects p-4">
-        <div class="container text-center">
-            <h1 class="mb-3 reveal-projects-title">Proyectos</h1>
+        <div class="container text-center position-relative">
+
+            <a href="/Index" class="backToIndex position-absolute start-0">@Localizer["GoBackTxt"]</a>
+
+
+            <ul class="navbar-nav position-absolute end-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white h4 rounded px-3 py-2" href="#"
+                       id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        @Thread.CurrentThread.CurrentUICulture.Name
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/Lang?culture=en">English</a></li>
+                        <li><a class="dropdown-item" href="/Lang?culture=es">Español</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <h1 class="mb-3 reveal-projects-title">@Localizer["ProjectsTitle"]</h1>
             <nav class="navigation mx-auto reveal-projects-nav">
                 <ul class="nav-list">
                     <li class="active btnBringAllProjects">
                         <a href="#">
-                            Todos los proyectos
+                            @Localizer["AllProjectsTxt"]
                         </a>
                     </li>
                     <li class="btnBringWebProjects">
                         <a href="#web">
-                            Web
+                            @Localizer["WebTxt"]
                         </a>
                     </li>
                     <li class="btnBringMobileProjects">
                         <a href="#mobile">
-                            Móvil
+                            @Localizer["MobileTxt"]
                         </a>
                     </li>
                     <li class="btnBringMiniProjects">
                         <a href="#mini">
-                            Mini proyectos
+                            @Localizer["MiniProjectsTxt"]
                         </a>
                     </li>
-                    <!-- more links -->
                     <div class="active-bar"></div>
                 </ul>
             </nav>
@@ -66,6 +83,7 @@
         </div>
     </section>
 
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/Projects.js" asp-append-version="true"></script>
 
