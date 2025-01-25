@@ -4,6 +4,7 @@ const nav = document.querySelector(".navigation");
 const btnBringWebProjects = $(".btnBringWebProjects")
 var projects = " ";
 
+
 $(".navigation").click(async function (e) {
     const target = $(e.target).closest("li"); // Asegura que apunte al `li`
     const navSibling = $(e.target.parentElement.parentElement.parentElement.nextElementSibling)

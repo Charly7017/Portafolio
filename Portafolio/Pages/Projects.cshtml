@@ -17,11 +17,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-
     <section class="projects p-4">
         <div class="container text-center position-relative">
 
-            <a href="/Index" class="backToIndex position-absolute start-0">@Localizer["GoBackTxt"]</a>
+            <a href="/Index" id="projectsContainer" data-projects-title="@Localizer["ProjectsTitle"]" class="backToIndex position-absolute start-0">@Localizer["GoBackTxt"]</a>
 
 
             <ul class="navbar-nav position-absolute end-0">
@@ -87,7 +86,19 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/Projects.js" asp-append-version="true"></script>
 
+
+    <script type="text/javascript">
+
+        // var projectsTitle = @Html.Raw(Json.Serialize(Localizer["ProjectsTitle"]));
+        // console.log(projectsTitle);
+        const projectsTitle = document.getElementById("projectsContainer").dataset.projectsTitle;
+        console.log(projectsTitle); // Imprime el título de los proyectos
+
+    </script>
+
 </body>
 </html>
+
+
 
 

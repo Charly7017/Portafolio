@@ -2,10 +2,14 @@ using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Portafolio.Repository;
+using Portafolio.Provider;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddTransient<IProjectsSpanishRepository, ProjectsProviderSpanishRepository>();
+builder.Services.AddTransient<IProjectsEnglishRepository, ProjectsProviderEnglishRepository>();
 
 
 builder.Services.AddRazorPages().
