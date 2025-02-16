@@ -121,7 +121,7 @@
     <value>Experience</value>
   </data>
   <data name="MeetDescription" xml:space="preserve">
-    <value>My journey began during my studies in Computer Systems Engineering, where I had the opportunity to complete professional internships at two companies. My experience focused on the development of web and mobile projects, applying my knowledge to create efficient solutions tailored to users' needs. Although I am at the beginning of my career, my passion for programming has driven me to be self-taught, always seeking to improve my technical skills while acquiring new knowledge.</value>
+    <value>Computer Systems Engineer with experience in web and mobile development, specializing in the creation of efficient, user-oriented applications. Passionate about programming and software development, with strong teamwork and problem-solving skills. I am a self-taught individual, committed to continuous learning and the implementation of innovative solutions.</value>
   </data>
   <data name="MeetMeTitle" xml:space="preserve">
     <value>Meet me</value>
@@ -142,14 +142,12 @@
     <value>I currently work as a junior developer, where I am responsible for developing and implementing new features in web applications, contributing to their continuous improvement and evolution. I am also in charge of receiving problem reports, analyzing application failures, identifying the root cause of errors, and implementing the necessary adjustments to fix them, ensuring the proper functioning of the system.</value>
   </data>
   <data name="TamsaExperience" xml:space="preserve">
-    <value>
-        I developed web and .NET applications using C#, covering projects in MAUI App, MVC App, and Web API.
+    <value>Development of web applications with C# and .NET, covering projects in MVC, Web API, MAUI.
     </value>
   </data>
   <data name="EhecatlExperience" xml:space="preserve">
     <value>
-		I was trained in the fundamentals of web development, acquiring knowledge in
-        frontend, backend, and databases.
+Training on web development, gaining knowledge in Frontend, Backend and databases.
     </value>
   </data>
   <data name="ProjectsTitle" xml:space="preserve">

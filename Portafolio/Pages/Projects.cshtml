@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Proyectos";
     Layout = "";
+    var cultureTag = System.Globalization.CultureInfo.CurrentCulture.Name;
 }
 
 <!DOCTYPE html>
@@ -59,7 +60,7 @@
                         <a href="#mini">
                             @Localizer["MiniProjectsTxt"]
                         </a>
-                    </li>
+                    </li> 
                     <div class="active-bar"></div>
                 </ul>
             </nav>
@@ -78,23 +79,12 @@
                     </div>
                 }
             </div>
-
         </div>
     </section>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/Projects.js" asp-append-version="true"></script>
-
-
-    <script type="text/javascript">
-
-        // var projectsTitle = @Html.Raw(Json.Serialize(Localizer["ProjectsTitle"]));
-        // console.log(projectsTitle);
-        const projectsTitle = document.getElementById("projectsContainer").dataset.projectsTitle;
-        console.log(projectsTitle); // Imprime el título de los proyectos
-
-    </script>
 
 </body>
 </html>

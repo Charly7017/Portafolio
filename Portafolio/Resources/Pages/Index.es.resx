@@ -121,7 +121,7 @@
     <value>Experiencia</value>
   </data>
   <data name="MeetDescription" xml:space="preserve">
-    <value>Mi trayectoria comenzó durante mis estudios de Ingeniería en Sistemas Computacionales, donde tuve la oportunidad de realizar prácticas profesionales en dos empresas. Mi experiencia fue en el desarrollo de proyectos web y móviles, aplicando mis conocimientos para crear soluciones eficientes y adaptadas a las necesidades de los usuarios. Aunque estoy en el inicio de mi carrera, mi pasión por la programación me ha llevado a ser autodidacta, siempre buscando mejorar mis habilidades técnicas y al mismo tiempo adquirir nuevos conocimientos.</value>
+    <value>Ingeniero en Sistemas Computacionales con experiencia en desarrollo web y móvil, especializado en la creación de aplicaciones eficientes y orientadas al usuario. Apasionado por la programación y el desarrollo de software, con habilidades en el trabajo en equipo y la resolución de problemas. Soy una persona autodidacta, comprometida con el aprendizaje continuo y la aplicación de soluciones inovadoras.</value>
   </data>
   <data name="MeetMeTitle" xml:space="preserve">
     <value>Conóceme</value>
@@ -139,17 +139,15 @@
     <value>Prácticante</value>
   </data>
   <data name="SharksiaExperience" xml:space="preserve">
-    <value>Actualmente, trabajo como desarrollador junior, donde soy responsable de desarrollar e implementar nuevas funcionalidades en aplicaciones web, contribuyendo a su mejora continua y evolución. También me encargo de recibir reportes de problemas, analizar fallos en las aplicaciones, identificar la causa raíz de los errores e implementar los ajustes necesarios para corregirlos, asegurando así el correcto funcionamiento del sistema.</value>
+    <value>Actualmente trabajo como desarrollador junior, donde soy responsable de desarrollar e implementar nuevas funcionalidades en aplicaciones web, contribuyendo a su mejora continua y evolución. También me encargo de recibir reportes de problemas, analizar fallos en las aplicaciones, identificar la causa raíz de los errores e implementar los ajustes necesarios para corregirlos, asegurando así el correcto funcionamiento del sistema.</value>
   </data>
   <data name="TamsaExperience" xml:space="preserve">
     <value>
-            Desarrollé aplicaciones web y .NET utilizando C#, abarcando proyectos en MAUI App, MVC App y Web API.
+Desarrollo de aplicaciones web con C# y .NET, abarcando proyectos MVC, Web API, MAUI.
         </value>
   </data>
   <data name="EhecatlExperience" xml:space="preserve">
-    <value>
-            Fui capacitado con los fundamentos del desarrollo web, adquirí conocimientos de frontend, backend y bases de datos.
-        </value>
+    <value>Capacitación en desarrollo web, adquirí conocimientos de Frontend, Backend y bases de datos.</value>
   </data>
   <data name="ProjectsTitle" xml:space="preserve">
     <value>Proyectos</value>
