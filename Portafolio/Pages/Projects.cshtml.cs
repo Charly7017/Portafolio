@@ -29,7 +29,7 @@ namespace Portafolio.Pages
         public IActionResult OnGet()
         {
             List<Project> allProjects = null;
-            var cultureTag = System.Globalization.CultureInfo.CurrentCulture.Name;
+            var cultureTag = CultureInfo.CurrentCulture.Name;
 
             allProjects = cultureTag == "es"
             ? _projectsSpanishRepository.GetProjects()
@@ -47,11 +47,12 @@ namespace Portafolio.Pages
 
             if(HttpContext.Request.Headers["X-Requested-With"] == "XMLHttpRequest")
             {
-                return new JsonResult(Projects);
+                return new JsonResult(new { Projects,cultureTag});
             }
 
             return Page();
 
         }
+
     }
 }
